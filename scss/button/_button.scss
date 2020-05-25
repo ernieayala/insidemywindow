@@ -1,0 +1,41 @@
+@include component("button") {
+	@include focus-outline;
+	@include size(auto, 3.2rem);
+	align-items: center;
+	background: transparent;
+	border: b(transparent);
+	border-radius: br("sm");
+	cursor: pointer;
+	display: inline-flex;
+	font-size: fs("md");
+	justify-content: center;
+	line-height: 1.15;
+	overflow: visible;
+	padding: box(0 "md");
+	position: relative;
+	text-transform: none;
+
+	@include is("disabled") {
+		cursor: default;
+		opacity: o("lighter");
+	}
+
+	@include mod("lg") {
+		font-size: fs("lg");
+		height: 4rem;
+		padding: box(0 "lg");
+	}
+
+	@include mod("sm") {
+		font-size: fs("sm");
+		height: 2.4rem;
+		padding: box(0 "sm");
+	}
+
+	@include mod("xs") {
+		border-radius: br("xs");
+		font-size: fs("xs");
+		height: 1rem;
+		padding: box(0 "base");
+	}
+}
