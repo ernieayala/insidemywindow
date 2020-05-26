@@ -1,13 +1,1 @@
-@import "teq-tonic";
 
-@include settings(
-	"mods" (
-		"all": true
-	)
-	"prefixes" (
-		"prefix": ".sn-"
-	)
-	"namespace" (
-		"button": ".sn-btn"
-	)
-);

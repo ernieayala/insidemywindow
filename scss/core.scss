@@ -1,4 +1,129 @@
-@import "base";
+@import "teq-tonic";
 
-// Components
-@import "button/button";
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+$shadow-color: #1d60e9;
+
+@keyframes wiggle {
+	0%   { box-shadow: rgba($shadow-color,0.3) 0 0 10px 5px; }
+	20%  { box-shadow: rgba($shadow-color,0.5) 0 0 20px 5px; }
+	40%  { box-shadow: rgba($shadow-color,0.6) 0 0 30px 5px; }
+	60%  { box-shadow: rgba($shadow-color,0.7) 0 0 25px 5px; }
+	80%  { box-shadow: rgba($shadow-color,0.5) 0 0 20px 5px; }
+	100% { box-shadow: rgba($shadow-color,0.3) 0 0 10px 5px; }
+}
+
+// @keyframes wiggle {
+// 	0%   { transform: rotate(0deg) }
+// 	20%  { transform: rotate(2deg) }
+// 	40%  { transform: rotate(0deg) }
+// 	60%  { transform: rotate(-2deg) }
+// 	80%  { transform: rotate(0deg) }
+// 	100% { transform: rotate( 2deg) }
+// }
+
+.ss-background {
+	@include size(100%);
+	align-items: center;
+	background-image: url('../images/background.jpg');
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	position: relative;
+
+	&::before {
+		@include absolute(top 0 left 0);
+		@include size(100%);
+		background: rgba(255,255,255,0.4);
+		content: '';
+	}
+
+	&-image {
+		align-items: center;
+		display: flex;
+		position: relative;
+
+		img {
+			@include size(auto, 768px);
+			position: relative;
+		}
+	}
+}
+
+.ss-window-btn {
+	background: rgba(255,255,255,0.1);
+	border: none;
+	box-shadow: rgba($shadow-color,0.3) 0 0 10px 5px;
+	border-radius: none;
+	position: absolute;
+
+	&:hover,
+	&:focus {
+		animation-duration: 0.4s;
+		animation-iteration-count: infinite;
+		animation-name: wiggle;
+		animation-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+		background: rgba($shadow-color, 0.4);
+		cursor: pointer;
+		outline: none;
+	}
+
+	&.-one {
+		@include absolute(top 276px left 342px);
+		@include size(132px, 118px);
+	}
+
+	&.-two {
+		@include absolute(top 313px left 530px);
+		@include size(131px, 92px);
+	}
+
+	&.-three {
+		@include absolute(top 452px left 335px);
+		@include size(135px, 92px);
+	}
+
+	&.-four {
+		@include absolute(top 425px left 229px);
+		@include size(70px, 64px);
+	}
+
+	&.-five {
+		@include absolute(top 516px left 143px);
+		@include size(116px, 67px);
+	}
+
+	&.-six {
+		@include absolute(top 300px left 704px);
+		@include size(53px, 43px);
+	}
+
+	&.-seven {
+		@include absolute(top 506px left 692px);
+		@include size(33px, 54px);
+	}
+}
+
+.ss-modal-overlay {
+	@include fixed(top 0 left 0);
+	@include size(100%);
+	align-items: center;
+	background: rgba(0,0,0,0.65);
+	display: flex;
+	justify-content: center;
+}
+
+.ss-modal {
+	@include size(400px, 300px);
+	background: white;
+}
