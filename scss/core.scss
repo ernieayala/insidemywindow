@@ -24,7 +24,7 @@ $shadow-color: #1d60e9;
 .ss-background {
 	@include size(100%);
 	align-items: center;
-	background-image: url('../images/background.jpg') !important;
+	background-image: url('https://ernieayala.github.io/insidemywindow/images/background.jpg');
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -145,31 +145,31 @@ $shadow-color: #1d60e9;
 		pointer-events: none;
 
 		.-anita & {
-			background-image: url('../images/F.tent.png') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/F.tent.png');
 		}
 
 		.-carla & {
-			background-image: url('../images/F.carla.png') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/F.carla.png');
 		}
 
 		.-kas & {
-			background-image: url('../images/F.kas.png') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/F.kas.png');
 		}
 
 		.-sebas & {
-			background-image: url('../images/F.sebas.png') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/F.sebas.png');
 		}
 
 		.-ernie & {
-			background-image: url('../images/F.tajinito.png') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/F.tajinito.png');
 		}
 
 		.-tammy & {
-			background-image: url('../images/F.tammy.png') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/F.tammy.png');
 		}
 
 		.-tent & {
-			background-image: url('../images/F.tent.png') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/F.tent.png');
 		}
 	}
 
@@ -184,31 +184,31 @@ $shadow-color: #1d60e9;
 		position: relative;
 
 		.-anita & {
-			background-image: url('../images/anita.jpeg') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/anita.jpeg');
 		}
 
 		.-carla & {
-			background-image: url('../images/carla.jpeg') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/carla.jpeg');
 		}
 
 		.-ernie & {
-			background-image: url('../images/ernie.jpeg') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/ernie.jpeg');
 		}
 
 		.-kas & {
-			background-image: url('../images/kas.jpeg') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/kas.jpeg');
 		}
 
 		.-sebas & {
-			background-image: url('../images/sebas.jpeg') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/sebas.jpeg');
 		}
 
 		.-tammy & {
-			background-image: url('../images/tammy.jpeg') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/tammy.jpeg');
 		}
 
 		.-tent & {
-			background-image: url('../images/tent.jpeg') !important;
+			background-image: url('https://ernieayala.github.io/insidemywindow/images/tent.jpeg');
 		}
 	}
 

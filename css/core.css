@@ -53,7 +53,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("../images/background.jpg") !important;
+  background-image: url("https://ernieayala.github.io/insidemywindow/images/background.jpg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -200,19 +200,19 @@ body {
     background-size: contain;
     pointer-events: none; }
     .-anita .ss-modal::after {
-      background-image: url("../images/F.tent.png") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/F.tent.png"); }
     .-carla .ss-modal::after {
-      background-image: url("../images/F.carla.png") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/F.carla.png"); }
     .-kas .ss-modal::after {
-      background-image: url("../images/F.kas.png") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/F.kas.png"); }
     .-sebas .ss-modal::after {
-      background-image: url("../images/F.sebas.png") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/F.sebas.png"); }
     .-ernie .ss-modal::after {
-      background-image: url("../images/F.tajinito.png") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/F.tajinito.png"); }
     .-tammy .ss-modal::after {
-      background-image: url("../images/F.tammy.png") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/F.tammy.png"); }
     .-tent .ss-modal::after {
-      background-image: url("../images/F.tent.png") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/F.tent.png"); }
   .ss-modal-image {
     width: 500px;
     height: 576px;
@@ -224,19 +224,19 @@ body {
     margin-top: 50px;
     position: relative; }
     .-anita .ss-modal-image {
-      background-image: url("../images/anita.jpeg") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/anita.jpeg"); }
     .-carla .ss-modal-image {
-      background-image: url("../images/carla.jpeg") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/carla.jpeg"); }
     .-ernie .ss-modal-image {
-      background-image: url("../images/ernie.jpeg") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/ernie.jpeg"); }
     .-kas .ss-modal-image {
-      background-image: url("../images/kas.jpeg") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/kas.jpeg"); }
     .-sebas .ss-modal-image {
-      background-image: url("../images/sebas.jpeg") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/sebas.jpeg"); }
     .-tammy .ss-modal-image {
-      background-image: url("../images/tammy.jpeg") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/tammy.jpeg"); }
     .-tent .ss-modal-image {
-      background-image: url("../images/tent.jpeg") !important; }
+      background-image: url("https://ernieayala.github.io/insidemywindow/images/tent.jpeg"); }
   .ss-modal-text {
     width: 337px;
     height: 576px;
