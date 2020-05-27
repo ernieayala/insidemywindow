@@ -5,23 +5,71 @@
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0" />
 	<meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
 
-	<title>Teq-Tonic Boilerplate</title>
+	<title>Sofia Silva</title>
 
 	<link href="./css/core.css" rel="stylesheet" type="text/css" />
+
+	<script>
+		let currentName;
+
+		function openModal(name) {
+			let element = document.getElementById("modal");
+			let link = document.getElementById("link");
+			element.classList.toggle("-open");
+			currentName = name;
+			link.setAttribute("href", "./images/"+name+".jpeg");
+			element.classList.toggle("-"+name);
+		}
+	</script>
 </head>
 <body>
 	<div class="ss-background">
 		<div class="ss-background-image">
 			<img src="/images/house.png" />
-			<button class="ss-window-btn -one"></button>
-			<button class="ss-window-btn -two"></button>
-			<button class="ss-window-btn -three"></button>
-			<button class="ss-window-btn -four"></button>
-			<button class="ss-window-btn -five"></button>
-			<button class="ss-window-btn -six"></button>
-			<button class="ss-window-btn -seven"></button>
+			<button onclick="openModal('ernie')" class="ss-window-btn -one"></button>
+			<button onclick="openModal('anita')" class="ss-window-btn -two"></button>
+			<button onclick="openModal('kas')" class="ss-window-btn -three"></button>
+			<button onclick="openModal('carla')" class="ss-window-btn -four"></button>
+			<button onclick="openModal('tent')" class="ss-window-btn -five"></button>
+			<button onclick="openModal('sebas')" class="ss-window-btn -six"></button>
+			<button onclick="openModal('tammy')" class="ss-window-btn -seven"></button>
 		</div>
 	</div>
-
+	<div class="ss-modal-overlay" id="modal">
+		<div class="ss-modal-shadow" onclick="openModal(currentName)"></div>
+		<div class="ss-modal">
+			<a href="#" id="link" target="_blank" class="ss-modal-image"></a>
+			<div class="ss-modal-text">
+				<div class="-anita">
+					<h3>Anita</h3>
+					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+				</div>
+				<div class="-carla">
+					<h3>Carla</h3>
+					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+				</div>
+				<div class="-ernie">
+					<h3>Ernie</h3>
+					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+				</div>
+				<div class="-kas">
+					<h3>Kas</h3>
+					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+				</div>
+				<div class="-sebas">
+					<h3>Sebas</h3>
+					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+				</div>
+				<div class="-tammy">
+					<h3>Tammy</h3>
+					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+				</div>
+				<div class="-tent">
+					<h3>Tent</h3>
+					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

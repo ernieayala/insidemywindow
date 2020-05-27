@@ -118,12 +118,164 @@ $shadow-color: #1d60e9;
 	@include fixed(top 0 left 0);
 	@include size(100%);
 	align-items: center;
-	background: rgba(0,0,0,0.65);
-	display: flex;
+	display: none;
 	justify-content: center;
+
+	&.-open {
+		display: flex;
+	}
+}
+
+.ss-modal-shadow {
+	@include absolute(top 0 left 0);
+	@include size(100%);
+	background: rgba(0,0,0,0.65);
 }
 
 .ss-modal {
-	@include size(400px, 300px);
-	background: white;
+	@include size(943px, 700px);
+	display: flex;
+	position: relative;
+	z-index: 10;
+
+	&::before {
+		@include absolute(top 50px left 50px);
+		@include size(839px, 576px);
+		background-color: white;
+		content: '';
+	}
+
+	&::after {
+		@include absolute(top 0 left 0);
+		@include size(943px, 700px);
+		content: '';
+		background-repeat: no-repeat;
+		background-size: contain;
+		pointer-events: none;
+
+		.-anita & {
+			background-image: url('../images/F.tent.png');
+		}
+
+		.-carla & {
+			background-image: url('../images/F.carla.png');
+		}
+
+		.-kas & {
+			background-image: url('../images/F.kas.png');
+		}
+
+		.-sebas & {
+			background-image: url('../images/F.sebas.png');
+		}
+
+		.-ernie & {
+			background-image: url('../images/F.tajinito.png');
+		}
+
+		.-tammy & {
+			background-image: url('../images/F.tammy.png');
+		}
+
+		.-tent & {
+			background-image: url('../images/F.tent.png');
+		}
+	}
+
+	&-image {
+		@include size(500px, 576px);
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-right: 4px solid black;
+		margin-left: 50px;
+		margin-top: 50px;
+		position: relative;
+
+		.-anita & {
+			background-image: url('../images/anita.jpeg');
+		}
+
+		.-carla & {
+			background-image: url('../images/carla.jpeg');
+		}
+
+		.-ernie & {
+			background-image: url('../images/ernie.jpeg');
+		}
+
+		.-kas & {
+			background-image: url('../images/kas.jpeg');
+		}
+
+		.-sebas & {
+			background-image: url('../images/sebas.jpeg');
+		}
+
+		.-tammy & {
+			background-image: url('../images/tammy.jpeg');
+		}
+
+		.-tent & {
+			background-image: url('../images/tent.jpeg');
+		}
+	}
+
+	&-text {
+		@include size(337px, 576px);
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		margin-top: 50px;
+		position: relative;
+
+		> div {
+			display: none;
+			color: #666;
+			font-family: Georgia;
+			padding: 50px;
+
+			.-anita & {
+				&.-anita {
+					display: block;
+				}
+			}
+
+			.-carla & {
+				&.-carla {
+					display: block;
+				}
+			}
+
+			.-kas & {
+				&.-kas {
+					display: block;
+				}
+			}
+
+			.-sebas & {
+				&.-sebas {
+					display: block;
+				}
+			}
+
+			.-ernie & {
+				&.-ernie {
+					display: block;
+				}
+			}
+
+			.-tammy & {
+				&.-tammy {
+					display: block;
+				}
+			}
+
+			.-tent & {
+				&.-tent {
+					display: block;
+				}
+			}
+		}
+	}
 }
