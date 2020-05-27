@@ -24,7 +24,7 @@ $shadow-color: #1d60e9;
 .ss-background {
 	@include size(100%);
 	align-items: center;
-	background-image: url('../images/background.jpg');
+	background-image: url('../images/background.jpg') !important;
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
