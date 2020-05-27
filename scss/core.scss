@@ -21,23 +21,26 @@ $shadow-color: #1d60e9;
 	100% { box-shadow: rgba($shadow-color,0.3) 0 0 10px 5px; }
 }
 
-.ss-background {
-	@include size(100%);
-	align-items: center;
+html {
 	background-image: url('https://ernieayala.github.io/insidemywindow/images/background.jpg');
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	display: flex;
-	justify-content: center;
-	position: relative;
 
 	&::before {
-		@include absolute(top 0 left 0);
+		@include fixed(top 0 left 0);
 		@include size(100%);
 		background: rgba(255,255,255,0.4);
 		content: '';
 	}
+}
+
+.ss-background {
+	@include size(100%);
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	position: relative;
 
 	&-image {
 		align-items: center;
@@ -48,6 +51,20 @@ $shadow-color: #1d60e9;
 			@include size(auto, 768px);
 			position: relative;
 		}
+	}
+}
+
+.ss-signature {
+	@include absolute(top 616px left 752px);
+
+	&:hover,
+	&:focus {
+		box-shadow: rgba($shadow-color,0.2) 0 0 5px 5px inset;
+		outline: none;
+	}
+
+	img {
+		height: 40px;
 	}
 }
 
