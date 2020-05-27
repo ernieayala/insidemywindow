@@ -11,6 +11,7 @@
 
 	<script>
 		let currentName;
+		let currentLang = "en";
 
 		function openModal(name) {
 			let element = document.getElementById("modal");
@@ -19,6 +20,18 @@
 			currentName = name;
 			link.setAttribute("href", "./images/"+name+".jpeg");
 			element.classList.toggle("-"+name);
+		}
+
+		function toggleLang() {
+			let element = document.getElementsByTagName("HTML")[0];
+
+			if(currentLang === "en") {
+				element.setAttribute("lang", "es");
+				currentLang = "es";
+			} else {
+				element.setAttribute("lang", "en");
+				currentLang = "en";
+			}
 		}
 	</script>
 </head>
@@ -41,35 +54,99 @@
 			<a href="#" id="link" target="_blank" class="ss-modal-image"></a>
 			<div class="ss-modal-text">
 				<div class="-anita">
-					<h3>Anita</h3>
-					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+					<h2>Anita</h2>
+					<h5 class="-en">Image consultant</h5>
+					<h5 class="-es">Asesora de imagen</h5>
+					<p class="-en">
+						"I am creating a set in my living room to be able to teach makeup and image on line.<br />
+						I no longer trust bosses, they always cheat on the employer and I honestly don't think any boss will give us job for a while; I rather find my own clients and do my own work; Also, I don't think the pear-shaped body is perfect, people need to know how to be happy with their own shape."
+					</p>
+					<p class="-es">
+						"Estoy creando un estudio en la sala de mi casa  para poder enseñar maquillaje e imagen a través del zoom.<br />
+						Ya no confío en los jefes, siempre engañan al empleador y, sinceramente, no creo que ningún jefe nos dé trabajo por un tiempo; prefiero buscar mis propios clientes y hacer mi propio trabajo; además, no creo que el cuerpo con forma de pera sea el perfecto, la gente necesita saber cómo ser feliz con su propia forma."
+					</p>
 				</div>
 				<div class="-carla">
-					<h3>Carla</h3>
-					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+					<h2>Carla</h2>
+					<h5 class="-en">Graphic designer</h5>
+					<h5 class="-es">Diseñadora</h5>
+					<p class="-en">
+						"My clients want me to talk to them all day on Zoom, it exhausts me to be on the computer. I miss seeing people live ... but I'm not afraid to go out because of the Covid, I'm scared to go outside because they are stealing for food. In January some guys robbed us with a gun, someone else had already robbed me with a knife, but with a gun was my first time and it scared me a lot... Now I have to learn animation because if I don't, my few clients who want everything for Yesterday would leave me."
+					</p>
+					<p class="-es">
+						"Mis clientes quieren que les hable todo el día por Zoom, me agota estar en la computadora, extraño ver a la gente en vivo... pero yo no tengo miedo de salir por el Covid, a mí me da miedo salir porque afuera están robando por comida. En enero nos robaron con pistola, ya me habían robado antes con cuchillo, pero pistola fue mi primera vez y me asustó mucho... Ahora tengo que aprender a hacer animación porque si no se me van mis pocos clientes que todo quieren para ayer."
+					</p>
 				</div>
 				<div class="-ernie">
-					<h3>Ernie</h3>
-					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+					<h2>Ernesto</h2>
+					<h5 class="-en">Professional Button Pusher (UX Engineer)</h5>
+					<h5 class="-es">Aplastador de botones profesional (Ingeniero UX)</h5>
+					<p class="-en">
+						"It's difficult to have to deal with the anxiety of others while watching all my projects at work fall apart and my dog ​​having diarrhea at the same time, maybe she ate some old nacho from the ground... either way, everything was shitty.<br />
+						Evil was already done, so I decided to build my ship for my game, I decided to program a new life."
+					</p>
+					<p class="-es">
+						"Es difícil tener que lidiar con la ansiedad de otros mientras veía cómo se desmoronaban todos mis proyectos en el trabajo mientras mi perro tenía diarrea... tal vez se comió algún nacho viejo del suelo... en fin, todo era una mierda.<br />
+						El mal ya estaba hecho, así que decidí empezar a programar y fue así como construí mi nave para mi juego, decidí programar una nueva vida."
+					</p>
 				</div>
 				<div class="-kas">
-					<h3>Kas</h3>
-					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+					<h2>Kas per</h2>
+					<h5 class="-en">Tattoo artist and lettering</h5>
+					<h5 class="-es">Tatuador y Letrista</h5>
+					<p class="-en">
+						"Everything was wrong before this virus, the protests in Chile, right here in Ecuador... this government took advantage of the situation to calm us down so we don't protest anymore. They are stealing easily while we are locked in fear...<br />
+						With all this maybe I'm just waiting for the zombies to come and fight against us and all this is all over.""
+					</p>
+					<p class="-es">
+						"Todo ya estaba mal antes de este virus, las protestas en Chile, aquí mismo en Ecuador; lo que hicieron los gobiernos fue encerrarnos para calmarnos y que no protestemos más, así ellos se roban todo en paz mientras nosotros estamos encerrados con miedo...<br />
+						Con todo esto sólo estoy esperando a que vengan los zombies para darnos de puñetes y que se acabe todo."
+					</p>
 				</div>
 				<div class="-sebas">
-					<h3>Sebas</h3>
-					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+					<h2>Manriquez Pozo</h2>
+					<h5 class="-en">Painter</h5>
+					<h5 class="-es">Pintor</h5>
+					<p class="-en">
+						"Mi vecina escuchó que yo era ecuatoriano y organizó a los vecinos para sacarme del edificio donde vivimos porque dijeron que los ecuatorianos estamos infectados.<br />
+						Cuando los vecinos tocaron mi puerta les dije que soy ecuatoriano pero que también tengo mi nacionalidad chilena por mi papá. Cuando escucharon que también era chileno me dejaron en paz."
+					</p>
+					<p class="-es">
+						"My neighbor heard my Ecuadorian accent and she organized the neighbors to remove me from the building we are living in because they said that Ecuadorians are infected.<br />
+						When the neighbors knocked on my door I told them that I am Ecuadorian but that I also have my Chilean nationality because of my dad. When they heard that I was also Chilean, they left me alone."
+					</p>
 				</div>
 				<div class="-tammy">
-					<h3>Tammy</h3>
-					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+					<h2>Tamy</h2>
+					<h5 class="-en">Middle school student</h5>
+					<h5 class="-es">Estudiante de primario</h5>
+					<p class="-en">
+						"This time has been very very very boring, I miss my friends.<br />
+						I like Tuesdays because my mom is allowed by the government to go out that day and we go together to the store. Today it's not Tuesday but I'm happy because my grandma visited me and taught me 'Pass Me The Hand'."
+					</p>
+					<p class="-es">
+						"Este tiempo ha sido muy muy muy aburrido, extraño a mis amigos. Me gustan los martes porque el gobierno le deja salir ese día a mi mamá y nos vamos a la tienda. Ahora no es martes pero estoy feliz porque vino mi abuela y me enseñó Paseme la Mano"
+					</p>
 				</div>
 				<div class="-tent">
-					<h3>Tent</h3>
-					<p>Action-items strategize integrate channels integrate dot-com. Create drive beta-test synergies sticky maximize semantic. Magnetic long-tail innovative ubiquitous efficient grow experiences 24/365 morph life-hacks dot-com eyeballs: maximize integrateAJAX-enabled. Partnerships killer synergize enable podcasts, open-source viral virtual streamline transition bricks-and-clicks: utilize tagclouds, best-of-breed. Web services matrix orchestrate morph architect architectures niches.</p>
+					<h2>Adri y Santi</h2>
+					<h5 class="-en">Storytellers</h5>
+					<h5 class="-es">Storytellers</h5>
+					<p class="-en">
+						"We prepare our camping backpacks, our thermoses with coffee and start walking towards the terrace until we spot the projected forest, that's where we set up our tent.<br />
+						The tent is our secret ship to travel into space and get away from the city. That night we traveled across the universe with the full moon, everything was very bright."
+					</p>
+					<p class="-es">
+						"Preparamos nuestra mochila de acampar, nuestros termos con café y caminamos hacia la terraza hasta divisar el bosque proyectado, ahí es donde armamos nuestra tienda de campaña.<br />
+						La carpa es nuestra nave secreta para viajar por el espacio y alejarnos de la ciudad. Esa noche viajamos con la luna llena, todo estaba muy  iluminado."
+					</p>
 				</div>
 			</div>
 		</div>
 	</div>
+	<button onclick="toggleLang()" class="ss-btn-lang">
+		<span class="-en">Cambiar a Español</span>
+		<span class="-es">Switch to English</span>
+	</button>
 </body>
 </html>

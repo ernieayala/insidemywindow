@@ -251,6 +251,10 @@ body {
             justify-content: center;
     margin-top: 50px;
     position: relative; }
+    .ss-modal-text h2 {
+      margin-bottom: 0; }
+    .ss-modal-text h5 {
+      margin-top: 0; }
     .ss-modal-text > div {
       display: none;
       color: #666;
@@ -270,3 +274,25 @@ body {
         display: block; }
       .-tent .ss-modal-text > div.-tent {
         display: block; }
+
+.ss-btn-lang {
+  right: 16px;
+  bottom: 16px;
+  position: absolute;
+  background: white;
+  border: none;
+  cursor: pointer;
+  font-family: Georgia;
+  padding: 8px 10px; }
+
+html[lang="en"] .-en {
+  display: block; }
+
+html[lang="en"] .-es {
+  display: none; }
+
+html[lang="es"] .-en {
+  display: none; }
+
+html[lang="es"] .-es {
+  display: block; }

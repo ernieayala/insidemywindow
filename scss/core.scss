@@ -21,15 +21,6 @@ $shadow-color: #1d60e9;
 	100% { box-shadow: rgba($shadow-color,0.3) 0 0 10px 5px; }
 }
 
-// @keyframes wiggle {
-// 	0%   { transform: rotate(0deg) }
-// 	20%  { transform: rotate(2deg) }
-// 	40%  { transform: rotate(0deg) }
-// 	60%  { transform: rotate(-2deg) }
-// 	80%  { transform: rotate(0deg) }
-// 	100% { transform: rotate( 2deg) }
-// }
-
 .ss-background {
 	@include size(100%);
 	align-items: center;
@@ -229,6 +220,14 @@ $shadow-color: #1d60e9;
 		margin-top: 50px;
 		position: relative;
 
+		h2 {
+			margin-bottom: 0;
+		}
+
+		h5 {
+			margin-top: 0;
+		}
+
 		> div {
 			display: none;
 			color: #666;
@@ -277,5 +276,35 @@ $shadow-color: #1d60e9;
 				}
 			}
 		}
+	}
+}
+
+// translation
+.ss-btn-lang {
+	@include absolute(bottom 16px right 16px);
+	background: white;
+	border: none;
+	cursor: pointer;
+	font-family: Georgia;
+	padding: 8px 10px;
+}
+
+html[lang="en"] {
+	.-en {
+		display: block;
+	}
+
+	.-es {
+		display: none;
+	}
+}
+
+html[lang="es"] {
+	.-en {
+		display: none;
+	}
+
+	.-es {
+		display: block;
 	}
 }
