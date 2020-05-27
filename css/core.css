@@ -200,19 +200,19 @@ body {
     background-size: contain;
     pointer-events: none; }
     .-anita .ss-modal::after {
-      background-image: url("../images/F.tent.png"); }
+      background-image: url("../images/F.tent.png") !important; }
     .-carla .ss-modal::after {
-      background-image: url("../images/F.carla.png"); }
+      background-image: url("../images/F.carla.png") !important; }
     .-kas .ss-modal::after {
-      background-image: url("../images/F.kas.png"); }
+      background-image: url("../images/F.kas.png") !important; }
     .-sebas .ss-modal::after {
-      background-image: url("../images/F.sebas.png"); }
+      background-image: url("../images/F.sebas.png") !important; }
     .-ernie .ss-modal::after {
-      background-image: url("../images/F.tajinito.png"); }
+      background-image: url("../images/F.tajinito.png") !important; }
     .-tammy .ss-modal::after {
-      background-image: url("../images/F.tammy.png"); }
+      background-image: url("../images/F.tammy.png") !important; }
     .-tent .ss-modal::after {
-      background-image: url("../images/F.tent.png"); }
+      background-image: url("../images/F.tent.png") !important; }
   .ss-modal-image {
     width: 500px;
     height: 576px;
@@ -224,19 +224,19 @@ body {
     margin-top: 50px;
     position: relative; }
     .-anita .ss-modal-image {
-      background-image: url("../images/anita.jpeg"); }
+      background-image: url("../images/anita.jpeg") !important; }
     .-carla .ss-modal-image {
-      background-image: url("../images/carla.jpeg"); }
+      background-image: url("../images/carla.jpeg") !important; }
     .-ernie .ss-modal-image {
-      background-image: url("../images/ernie.jpeg"); }
+      background-image: url("../images/ernie.jpeg") !important; }
     .-kas .ss-modal-image {
-      background-image: url("../images/kas.jpeg"); }
+      background-image: url("../images/kas.jpeg") !important; }
     .-sebas .ss-modal-image {
-      background-image: url("../images/sebas.jpeg"); }
+      background-image: url("../images/sebas.jpeg") !important; }
     .-tammy .ss-modal-image {
-      background-image: url("../images/tammy.jpeg"); }
+      background-image: url("../images/tammy.jpeg") !important; }
     .-tent .ss-modal-image {
-      background-image: url("../images/tent.jpeg"); }
+      background-image: url("../images/tent.jpeg") !important; }
   .ss-modal-text {
     width: 337px;
     height: 576px;
