@@ -1,2 +1,2 @@
 # insidemywindow
-School project for Sofia
+School art project for my wife Sofia
