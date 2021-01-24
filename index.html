@@ -13,6 +13,11 @@
 		let currentName;
 		let currentLang = "en";
 
+		function openIntro() {
+			let element = document.getElementById("intro");
+			element.classList.toggle("-open");
+		}
+
 		function openModal(name) {
 			let element = document.getElementById("modal");
 			let link = document.getElementById("link");
@@ -33,6 +38,8 @@
 				currentLang = "en";
 			}
 		}
+
+		setTimeout( function(){ openIntro(); }, 100);
 	</script>
 </head>
 <body>
@@ -51,6 +58,53 @@
 			</a>
 		</div>
 	</div>
+	<div class="ss-menu">
+		<h1>Inside My Window</h1>
+		<button onclick="openModal('tent')">Adri and Santi</button>
+		<button onclick="openModal('anita')">Anita</button>
+		<button onclick="openModal('carla')">Carla</button>
+		<button onclick="openModal('ernie')">Ernesto</button>
+		<button onclick="openModal('kas')">Kas per</button>
+		<button onclick="openModal('sebas')">Manriquez Pozo</button>
+		<button onclick="openModal('tammy')">Tamy</button>
+		<a href="https://www.instagram.com/sofiaharpia/" target="_blank" class="ss-signature">
+			<img src="images/signature.png" />
+		</a>
+	</div>
+	<div class="ss-modal-overlay -intro" id="intro">
+		<div class="ss-modal-shadow" onclick="openIntro()"></div>
+		<div class="ss-modal">
+			<div class="ss-modal-intro-text -intro -mobile">
+				<span class="-en">
+					<em>This is built for a desktop and tablet experince.</em><br /><br />
+					For this project, I talked to some friends about their quarantine experiences. While my friends shared their stories, I illustrated what they were saying, meaning I applied the old technique: "draw while you have a conversation."<br /><br />
+					Inside My Window is an online interactive project where you will find a house with many windows, alluding to the lockdown that we experienced at the beginning of the pandemic.<br /><br />
+					Each window shows a different story with a fragment of the conversation; click on them to find out more.<br /><br />
+				</span>
+				<span class="-es">
+					<em>Está construido para tablet y escritorio.</em><br /><br />
+					Para este proyecto, hablé con algunos amigos sobre sus experiencias de cuarentena. Mientras mis amigos compartían sus historias, ilustré lo que decían, es decir, apliqué la vieja técnica: “dibuja mientras conversas”.<br /><br />
+					Dentro de mi Ventana es un proyecto interactivo en línea, donde encontrarás una casa con varias ventanas en alusión al encierro que vivimos al inicio de la pandemia.<br /><br />
+					Cada ventana muestra una historia diferente con un fragmento de la conversación; haz click en ellas para saber más.<br /><br />
+				</span>
+			</div>
+			<div class="ss-modal-intro-text -intro">
+				<span class="-en">
+					For this project, I talked to some friends about their quarantine experiences. While my friends shared their stories, I illustrated what they were saying, meaning I applied the old technique: "draw while you have a conversation."<br /><br />
+					Inside My Window is an online interactive project where you will find a house with many windows, alluding to the lockdown that we experienced at the beginning of the pandemic.<br /><br />
+					Each window shows a different story with a fragment of the conversation; click on them to find out more.<br /><br />
+					<em>It is better to open the link on a computer. It might get distorted on other devices.</em>
+				</span>
+				<span class="-es">
+					Para este proyecto, hablé con algunos amigos sobre sus experiencias de cuarentena. Mientras mis amigos compartían sus historias, ilustré lo que decían, es decir, apliqué la vieja técnica: “dibuja mientras conversas”.<br /><br />
+					Dentro de mi Ventana es un proyecto interactivo en línea, donde encontrarás una casa con varias ventanas en alusión al encierro que vivimos al inicio de la pandemia.<br /><br />
+					Cada ventana muestra una historia diferente con un fragmento de la conversación; haz click en ellas para saber más.<br /><br />
+					<em>Es mejor abrir el enlace en una computadora. Podría distorsionarse en otros dispositivos.</em>
+				</span>
+			</div>
+			<div class="ss-modal-close-button" onclick="openIntro()">X</div>
+		</div>
+	</div>
 	<div class="ss-modal-overlay" id="modal">
 		<div class="ss-modal-shadow" onclick="openModal(currentName)"></div>
 		<div class="ss-modal">
@@ -61,12 +115,12 @@
 					<h5 class="-en">Image consultant</h5>
 					<h5 class="-es">Asesora de imagen</h5>
 					<p class="-en">
-						"I am creating a tv set in my living room so I can teach makeup and body image online.<br />
-						I no longer trust bosses, they always cheat on the employers and I honestly don't think any boss will give us a job for a while; I’d rather find my own clientele and do my work... Besides I don't think the pear-shaped body is perfect, people could learn how to be happy with their own body shape."
+						I am turning my living room on a tv set so I can teach makeup and body image online.<br />
+						I no longer trust companies; in these challenging times, they are cheating on the employees. Honestly, I also don't think any company will have an open vacancy for a while; instead, I prefer to find my clientele and do my work. In that way, I can teach women that the pear-shaped body is not the only perfect one. We all need to get out of stereotypes and learn how to be happy with our body shape.
 					</p>
 					<p class="-es">
-						"Estoy creando un estudio de tv en la sala de mi casa para poder enseñar maquillaje e imagen personal a través del Zoom.<br />
-						Ya no confío en los jefes, siempre engañan al empleador y, sinceramente, no creo que ningún jefe nos vaya a dar trabajo por un largo tiempo, así que prefiero buscar mis propios clientes y hacer mi propio trabajo... además, no creo que el cuerpo con forma de pera sea el perfecto y la gente puede aprender a ser feliz con su propia forma."
+						Estoy transformando mi sala en un set de tv para poder enseñar maquillaje e imagen personal en línea.<br />
+						Ya no confío en las empresas; en estos tiempos difíciles están engañando a los empleados. Y honestamente, tampoco creo que ninguna empresa tenga una vacante abierta por un tiempo; en cambio, prefiero encontrar a mi clientela y hacer mi trabajo. De esa manera, puedo enseñar a las mujeres que el cuerpo en forma de pera no es el único perfecto. Todos necesitamos salir de los estereotipos y aprender a ser felices con la forma de nuestro cuerpo.
 					</p>
 				</div>
 				<div class="-carla">
@@ -74,12 +128,14 @@
 					<h5 class="-en">Graphic designer</h5>
 					<h5 class="-es">Diseñadora</h5>
 					<p class="-en">
-						"My clients want me to talk to them all day long on Zoom, being on the computer that much is melting me, I miss seeing people live ... but I'm not afraid to go out because of the Covid, I'm scared to go outside because they are stealing to get food. In January some guys robbed my friend and I with a gun, someone else had already robbed me using a knife, but this was my first time with a gun and it scared me a lot...<br />
-						Now I have to learn animation because if I don't my clients would leave me, and I need them cuz I'm planning to stay inside until 2021."
+						My clients want "to Zoom" all day long. Being on the computer that long melts me; I miss seeing people live.<br />
+						I'm not afraid to go outside so much for the Covid, but because people are stealing to get food. Now that I think about it, thieves had only robbed me using a knife, but in January, some guys robbed my friend and me using a gun; that was my first experience with a gun, and it scared me a lot.<br />
+						Anyways! This week I need to learn animation to make some extra money since I'm planning to stay inside until 2021.
 					</p>
 					<p class="-es">
-						"Mis clientes quieren que les hable todo el día por Zoom, ya me derrite estar en la computadora tanto tiempo, extraño ver a la gente en vivo... pero yo no tengo miedo de salir por el Covid, a mí me da miedo salir porque afuera están robando por comida. En enero nos robaron a mi y a un amigo con pistola, a mí ya me habían robado antes con cuchillo, pero con pistola fue mi primera vez y me asustó mucho...<br />
-						Ahora tengo que aprender a hacer animación porque si no se me van mis clientes y no vale porque planeo quedarme aquí dentro hasta el 2021."
+						Mis clientes quieren “hacer Zoom” todo el día. Estar frente a la computadora tanto tiempo me derrite, extraño ver a la gente en vivo.<br />
+						No tengo tanto miedo de salir a la calle por el Covid, sino porque la gente está robando para conseguir comida. Ahora que lo pienso, los ladrones solamente me habían robado con cuchillo, pero en enero, unos tipos nos robaron a mi amigo y a mí con un arma; Esa fue mi primera experiencia con un arma y me asustó mucho.<br />
+						¡Como sea! Esta semana necesito aprender animación para ganar algo de dinero extra, ya que planeo quedarme adentro hasta 2021.
 					</p>
 				</div>
 				<div class="-ernie">
@@ -87,12 +143,12 @@
 					<h5 class="-en">Professional Button Pusher (UX Engineer)</h5>
 					<h5 class="-es">Aplastador de botones profesional (Ingeniero UX)</h5>
 					<p class="-en">
-						"It's difficult to have to deal with the anxiety of others while watching all my projects at work fall apart and my dog ​​having diarrhea at the same time, maybe she ate some old nacho from the ground... either way, everything was shitty.<br />
-						I started building my ship for my online game, I started programming my new life."
+						It's challenging to have to deal with other people's anxiety while watching all my projects fall apart at work and my dog ​​having diarrhea at the same time. Maybe, Sophie the dog ate some old nacho from the ground. Either way, everything was getting destroyed.<br />
+						I decided to start building a ship for my online game, and there is when I thought it would be better to start coding my new life.
 					</p>
 					<p class="-es">
-						"Es difícil tener que lidiar con la ansiedad de otros mientras veo que todos mis proyectos en el trabajo se desmoronan y mi perro tiene diarrea al mismo tiempo... tal vez se comió algún nacho viejo del suelo... en fin, todo era una mierda.<br />
-						Empecé a construir mi nave para mi juego en linea, empecé a programar mi nueva vida."
+						Es un desafío tener que lidiar con la ansiedad de otras personas mientras veo cómo todos mis proyectos en el trabajo se desmoronan y mi perro tiene diarrea al mismo tiempo. Tal vez, Sophie el Perro comió un nacho viejo del suelo. De cualquier manera, todo se estaba destruyendo.<br />
+						Decidí comenzar a construir un barco para mi juego en línea, y ahí es cuando pensé que sería mejor comenzar a programarme mi nueva vida.
 					</p>
 				</div>
 				<div class="-kas">
@@ -100,12 +156,14 @@
 					<h5 class="-en">Tattoo artist</h5>
 					<h5 class="-es">Tatuador</h5>
 					<p class="-en">
-						"Everything was wrong before this pandemic, protests in Chile, right here in Ecuador... Governments took advantage of the situation to calm us down so we don't protest anymore. They are stealing easily while we are locked in fear...<br />
-						With all this collapse I'm just waiting for the zombies to come to fight us and all this is finally over."
+						Everything was already wrong before this pandemic, protests in Chile, right here in Ecuador, protests all over... Governments took advantage of the virus to lock us down, so we don't protest anymore.<br />
+						Politicians are easily stealing while we are locked in fear.<br />
+						With the system collapsed, I'm just waiting for the zombies to come to fight us, and all this is finally over.
 					</p>
 					<p class="-es">
-						"Todo ya estaba mal antes de esta pandemia, las protestas en Chile, aquí mismo en Ecuador; lo que hicieron los gobiernos fue encerrarnos para calmarnos y que no protestemos más, así ellos se roban todo en paz mientras nosotros estamos encerrados con miedo...<br />
-						Con todo este colapso sólo estoy esperando a que vengan los zombies para darnos de puñetes y que de una vez se acabe todo."
+						Todo ya estaba mal antes de esta pandemia, protestas en Chile, aquí mismo en Ecuador, protestas por todos lados... Los gobiernos aprovecharon el virus para encerrarnos, así no protestamos más.<br />
+						Los políticos roban fácilmente mientras nosotros estamos atrapados por el miedo.<br />
+						Con el sistema colapsado, solo estoy esperando a que los zombis vengan a luchar contra nosotros, y todo esto finalmente termine.
 					</p>
 				</div>
 				<div class="-sebas">
@@ -113,12 +171,12 @@
 					<h5 class="-en">Painter</h5>
 					<h5 class="-es">Pintor</h5>
 					<p class="-en">
-						"My neighbor heard my Ecuadorian accent and she organized the neighbors to remove me from the building we are living in because they said that Ecuadorians are the most infected ones.<br />
-						When the neighbors knocked on my door I told them that I am born Ecuadorian but I  have my Chilean nationality because of my dad as well. When I showed them my Chilean passport, they left me alone. Everything seems so illogical to me."
+						The news is saying Ecuadorians are the most infected ones on this pandemic. The lady next door heard my Ecuadorian accent; therefore, she organized the neighbors to remove my girlfriend and me from the apartment we live in since 2019.<br />
+						Neighbors knocked on my door, and they were determined to kick me out; my Argentinian girlfriend was ok to stay, but I needed to leave. I told them I am born Ecuadorian, but I  also have my dad's Chilean nationality. And it wasn't until I showed them my Chilean passport that they left me alone. Nothing seems to make sense to me.
 					</p>
 					<p class="-es">
-						"Mi vecina escuchó que yo era ecuatoriano y organizó a los vecinos para sacarme del edificio donde vivimos porque dijeron que los ecuatorianos somos los más infectados.<br />
-						Cuando los vecinos tocaron mi puerta les dije que soy ecuatoriano pero que también tengo mi nacionalidad chilena por mi papá. Cuando les mostré mi pasaporte chileno me dejaron en paz. Todo me pareció tan ilógico."
+						Los noticieros dicen que los ecuatorianos son los más contagiados en esta pandemia. La vecina escuchó mi acento ecuatoriano, por lo que organizó a los vecinos para sacarnos a mi novia y a mí del departamento en el que vivimos desde 2019.<br />
+						Los vecinos llamaron a mi puerta y estaban decididos a echarme; mi novia argentina podía quedarse, pero yo tenía que irme. Les dije que nací ecuatoriano, pero también tengo la nacionalidad chilena por mi papá. Y no fue hasta que les mostré mi pasaporte chileno que me dejaron en paz. Nada parece tener sentido para mí.
 					</p>
 				</div>
 				<div class="-tammy">
@@ -126,12 +184,12 @@
 					<h5 class="-en">Middle school student</h5>
 					<h5 class="-es">Estudiante de primario</h5>
 					<p class="-en">
-						"This time has been very very very boring, I miss my friends.<br />
-						Tuesdays make me happy because my mom is allowed by the government to go out of the house, so we go together to the store. Today it's not Tuesday but I'm happy because my grandma visited me and taught me how to play 'Pass Me The Hand'."
+						This time has been very, very, very dull; I miss my friends.<br />
+						Tuesdays make me happy because my mom is allowed by the government to go outside the house, so we go together to the store. Today it's not Tuesday, but I'm happy because my grandma visited me and taught me how to play Pass-Me-The-Hand (Stop hand).
 					</p>
 					<p class="-es">
-						"Este tiempo ha sido muy muy muy aburrido, extraño a mis amigos.<br />
-						Los martes me ponen feliz porque es el día permitido por el gobierno para que mi mamá salga de la casa, así que nos vamos juntas a la tienda. Ahora no es Martes pero igual estoy feliz porque vino mi abuela y me enseñó a jugar 'Paseme la Mano'."
+						Este tiempo ha sido muy, muy, pero muy aburrido; extraño a mis amigos.<br />
+						Los martes me hacen feliz porque son los días que el gobierno le permite a mi mamá salir de la casa, así que vamos juntas a la tienda. Hoy no es martes, pero estoy feliz porque mi abuela me visitó y me enseñó a jugar Pasame la Mano (Parame la Mano).
 					</p>
 				</div>
 				<div class="-tent">
@@ -140,15 +198,16 @@
 					<h5 class="-en">Filmmakers</h5>
 					<h5 class="-es">Cineastas</h5>
 					<p class="-en">
-						"We prepared our camping backpacks, filled our thermoses with coffee and we started our journey to the terrace until we reached the projected forest, that's where we set up our tent.<br />
-						We wanted to get away from the city, so we piloted our tent to the space. That night we traveled across the universe with the full moon and our beloved Goya, who hid under the blankets. The sky was full of origami stars. Everything was so bright."
+						One day, we prepared our camping backpacks, filled our thermoses with coffee, and we started our journey to the terrace until we reached the forest we generated with the projector. This is where we set up our tent.<br />
+						That night, we wanted to get away from Covid, so we piloted our tent to space. We traveled across the universe with the full moon and our beloved dog Goya under the blankets. The sky was full of origami stars. Everything was so bright and happy.
 					</p>
 					<p class="-es">
-						"Preparamos nuestras mochilas de acampar, llenamos nuestros termos con café y empezamos nuestra travesía hacia la terraza hasta llegar al bosque proyectado, ahí es donde armamos nuestra tienda de campaña.<br />
-						Queríamos alejarnos de la ciudad, así que piloteamos nuestra carpa hacia el espacio. Esa noche viajamos por el universo con la luna llena y nuestro amado Goya, quien se escondió debajo de las cobijas. El cielo estaba lleno de origamis estelares. Todo estaba muy iluminado."
+						Un día preparamos nuestras mochilas de acampar, llenamos nuestros termos con café, y comenzamos nuestra travesía hacia la terraza de nuestra casa hasta llegar al bosque que habíamos generamos con el proyector. Ahí es donde instalamos nuestra carpa.<br />
+						Esa noche, queríamos alejarnos del Covid, así que piloteamos nuestra tienda de campaña hacia el espacio. Viajamos por el universo con la luna llena y nuestro querido perro Goya bajo las mantas. El cielo estaba lleno de estrellas de origami. Todo era tan brillante y feliz.
 					</p>
 				</div>
 			</div>
+			<div class="ss-modal-close-button" onclick="openModal(currentName)">X</div>
 		</div>
 	</div>
 	<button onclick="toggleLang()" class="ss-btn-lang">
