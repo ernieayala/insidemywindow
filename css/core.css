@@ -60,6 +60,9 @@ html {
     height: 100%;
     background: rgba(255, 255, 255, 0.4);
     content: ''; }
+    @media (max-width: 767.9px) {
+      html::before {
+        background: rgba(255, 255, 255, 0.2); } }
 
 .ss-background {
   width: 100%;
@@ -82,21 +85,39 @@ html {
     display: -ms-flexbox;
     display: flex;
     position: relative; }
-    .ss-background-image img {
+    .ss-background-image > img {
       width: auto;
       height: 768px;
       position: relative; }
+      @media (max-width: 1023.9px) {
+        .ss-background-image > img {
+          width: 768px;
+          height: auto; } }
+      @media (max-width: 767.9px) {
+        .ss-background-image > img {
+          display: none; } }
 
 .ss-signature {
   top: 616px;
   left: 752px;
   position: absolute; }
+  @media (max-width: 1023.9px) {
+    .ss-signature {
+      top: 466px;
+      left: 582px;
+      position: absolute; } }
+  @media (max-width: 767.9px) {
+    .ss-signature {
+      display: none; } }
   .ss-signature:hover, .ss-signature:focus {
     -webkit-box-shadow: rgba(29, 96, 233, 0.2) 0 0 5px 5px inset;
             box-shadow: rgba(29, 96, 233, 0.2) 0 0 5px 5px inset;
     outline: none; }
   .ss-signature img {
     height: 40px; }
+    @media (max-width: 1023.9px) {
+      .ss-signature img {
+        height: 30px; } }
 
 .ss-window-btn {
   background: rgba(255, 255, 255, 0.1);
@@ -117,48 +138,100 @@ html {
     background: rgba(29, 96, 233, 0.4);
     cursor: pointer;
     outline: none; }
+  @media (max-width: 767.9px) {
+    .ss-window-btn {
+      display: none; } }
   .ss-window-btn.-one {
     top: 276px;
     left: 342px;
     position: absolute;
     width: 132px;
     height: 118px; }
+    @media (max-width: 1023.9px) {
+      .ss-window-btn.-one {
+        top: 211px;
+        left: 260px;
+        position: absolute;
+        width: 97px;
+        height: 88px; } }
   .ss-window-btn.-two {
     top: 313px;
     left: 530px;
     position: absolute;
     width: 131px;
     height: 92px; }
+    @media (max-width: 1023.9px) {
+      .ss-window-btn.-two {
+        top: 233px;
+        left: 397px;
+        position: absolute;
+        width: 99px;
+        height: 70px; } }
   .ss-window-btn.-three {
     top: 452px;
     left: 335px;
     position: absolute;
     width: 135px;
     height: 92px; }
+    @media (max-width: 1023.9px) {
+      .ss-window-btn.-three {
+        top: 337px;
+        left: 253px;
+        position: absolute;
+        width: 100px;
+        height: 72px; } }
   .ss-window-btn.-four {
     top: 425px;
     left: 229px;
     position: absolute;
     width: 70px;
     height: 64px; }
+    @media (max-width: 1023.9px) {
+      .ss-window-btn.-four {
+        top: 318px;
+        left: 170px;
+        position: absolute;
+        width: 55px;
+        height: 48px; } }
   .ss-window-btn.-five {
     top: 516px;
     left: 143px;
     position: absolute;
     width: 116px;
     height: 67px; }
+    @media (max-width: 1023.9px) {
+      .ss-window-btn.-five {
+        top: 380px;
+        left: 93px;
+        position: absolute;
+        width: 104px;
+        height: 57px; } }
   .ss-window-btn.-six {
     top: 300px;
     left: 704px;
     position: absolute;
     width: 53px;
     height: 43px; }
+    @media (max-width: 1023.9px) {
+      .ss-window-btn.-six {
+        top: 226px;
+        left: 526px;
+        position: absolute;
+        width: 42px;
+        height: 32px; } }
   .ss-window-btn.-seven {
     top: 506px;
     left: 692px;
     position: absolute;
     width: 33px;
     height: 54px; }
+    @media (max-width: 1023.9px) {
+      .ss-window-btn.-seven {
+        top: 380px;
+        left: 520px;
+        position: absolute;
+        width: 24px;
+        height: 43px; } }
 
 .ss-modal-overlay {
   top: 0;
@@ -194,6 +267,14 @@ html {
   display: flex;
   position: relative;
   z-index: 10; }
+  @media (max-width: 767.9px) {
+    .ss-modal {
+      width: 100%;
+      height: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .ss-modal::before {
     top: 50px;
     left: 50px;
@@ -202,6 +283,20 @@ html {
     height: 576px;
     background-color: white;
     content: ''; }
+    @media (max-width: 1023.9px) {
+      .ss-modal::before {
+        top: 40px;
+        left: 30px;
+        position: absolute;
+        width: 698px;
+        height: 466px; } }
+    @media (max-width: 767.9px) {
+      .ss-modal::before {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 90%; } }
   .ss-modal::after {
     top: 0;
     left: 0;
@@ -212,6 +307,13 @@ html {
     background-repeat: no-repeat;
     background-size: contain;
     pointer-events: none; }
+    @media (max-width: 1023.9px) {
+      .ss-modal::after {
+        width: 768px;
+        height: 570px; } }
+    @media (max-width: 767.9px) {
+      .ss-modal::after {
+        display: none; } }
     .-anita .ss-modal::after {
       background-image: url("https://ernieayala.github.io/insidemywindow/images/F.tent.png"); }
     .-carla .ss-modal::after {
@@ -220,7 +322,8 @@ html {
       background-image: url("https://ernieayala.github.io/insidemywindow/images/F.kas.png"); }
     .-sebas .ss-modal::after {
       background-image: url("https://ernieayala.github.io/insidemywindow/images/F.sebas.png"); }
-    .-ernie .ss-modal::after {
+    .-ernie .ss-modal::after,
+    .-intro .ss-modal::after {
       background-image: url("https://ernieayala.github.io/insidemywindow/images/F.tajinito.png"); }
     .-tammy .ss-modal::after {
       background-image: url("https://ernieayala.github.io/insidemywindow/images/F.tammy.png"); }
@@ -236,6 +339,18 @@ html {
     margin-left: 50px;
     margin-top: 50px;
     position: relative; }
+    @media (max-width: 1023.9px) {
+      .ss-modal-image {
+        width: 40%;
+        height: 456px;
+        margin-left: 40px; } }
+    @media (max-width: 767.9px) {
+      .ss-modal-image {
+        width: 100%;
+        height: 40%;
+        margin: 0;
+        border-right: none;
+        border-bottom: 4px solid black; } }
     .-anita .ss-modal-image {
       background-image: url("https://ernieayala.github.io/insidemywindow/images/anita.jpeg"); }
     .-carla .ss-modal-image {
@@ -264,8 +379,31 @@ html {
             justify-content: center;
     margin-top: 50px;
     position: relative; }
+    @media (max-width: 1023.9px) {
+      .ss-modal-text {
+        width: 50%;
+        height: 506px;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        margin-top: 0;
+        padding-top: 80px; } }
+    @media (max-width: 767.9px) {
+      .ss-modal-text {
+        width: 100%;
+        height: 60%;
+        margin: 0;
+        padding: 0; } }
+    .ss-modal-text p {
+      font-size: 16px; }
+      @media (max-width: 767.9px) {
+        .ss-modal-text p {
+          font-size: 14px; } }
     .ss-modal-text h2 {
       margin-bottom: 0; }
+      @media (max-width: 767.9px) {
+        .ss-modal-text h2 {
+          margin: 0; } }
     .ss-modal-text h5 {
       margin-top: 0; }
     .ss-modal-text > div {
@@ -273,6 +411,10 @@ html {
       color: #666;
       font-family: Georgia;
       padding: 50px; }
+      @media (max-width: 1023.9px) {
+        .ss-modal-text > div {
+          padding: 20px;
+          padding-right: 40px; } }
       .-anita .ss-modal-text > div.-anita {
         display: block; }
       .-carla .ss-modal-text > div.-carla {
@@ -287,6 +429,111 @@ html {
         display: block; }
       .-tent .ss-modal-text > div.-tent {
         display: block; }
+  .-intro .ss-modal .ss-modal-intro-text {
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: Georgia;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 25%;
+    position: relative; }
+    @media (max-width: 1023.9px) {
+      .-intro .ss-modal .ss-modal-intro-text {
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        padding: 20%; } }
+    .-intro .ss-modal .ss-modal-intro-text.-intro {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .-intro .ss-modal .ss-modal-intro-text.-intro.-mobile {
+        display: none; }
+      @media (max-width: 767.9px) {
+        .-intro .ss-modal .ss-modal-intro-text.-intro {
+          display: none; }
+          .-intro .ss-modal .ss-modal-intro-text.-intro.-mobile {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex; } }
+
+.ss-modal-close-button {
+  top: 90px;
+  right: 90px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Georgia;
+  font-size: 22px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .ss-modal-close-button:hover {
+    background-color: rgba(0, 0, 0, 0.05); }
+  @media (max-width: 1023.9px) {
+    .ss-modal-close-button {
+      top: 70px;
+      right: 70px;
+      position: absolute; } }
+  @media (max-width: 767.9px) {
+    .ss-modal-close-button {
+      top: 0;
+      right: 0;
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background-color: rgba(0, 0, 0, 0.02); } }
+
+.ss-menu {
+  top: 20px;
+  left: 0;
+  position: absolute;
+  width: 90%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: Georgia;
+  padding: 20px; }
+  @media (max-width: 767.9px) {
+    .ss-menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .ss-menu .ss-signature {
+        top: auto;
+        left: auto;
+        position: relative;
+        display: block;
+        margin-top: 20px; } }
+  .ss-menu button {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    font-family: Georgia;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: left; }
+    .ss-menu button:hover {
+      background-color: rgba(0, 0, 0, 0.2); }
 
 .ss-btn-lang {
   right: 16px;
