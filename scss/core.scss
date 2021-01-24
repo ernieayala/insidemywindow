@@ -32,6 +32,10 @@ html {
 		@include size(100%);
 		background: rgba(255,255,255,0.4);
 		content: '';
+
+		@media (max-width: 767.9px) {
+			background: rgba(255,255,255,0.2);
+		}
 	}
 }
 
@@ -47,15 +51,31 @@ html {
 		display: flex;
 		position: relative;
 
-		img {
+		> img {
 			@include size(auto, 768px);
 			position: relative;
+
+			@media (max-width: 1023.9px) {
+				@include size(768px, auto);
+			}
+
+			@media (max-width: 767.9px) {
+				display: none;
+			}
 		}
 	}
 }
 
 .ss-signature {
 	@include absolute(top 616px left 752px);
+
+	@media (max-width: 1023.9px) {
+		@include absolute(top 466px left 582px);
+	}
+
+	@media (max-width: 767.9px) {
+		display: none;
+	}
 
 	&:hover,
 	&:focus {
@@ -65,6 +85,10 @@ html {
 
 	img {
 		height: 40px;
+
+		@media (max-width: 1023.9px) {
+			height: 30px;
+		}
 	}
 }
 
@@ -86,39 +110,78 @@ html {
 		outline: none;
 	}
 
+	@media (max-width: 767.9px) {
+		display: none;
+	}
+
 	&.-one {
 		@include absolute(top 276px left 342px);
 		@include size(132px, 118px);
+
+		@media (max-width: 1023.9px) {
+			@include absolute(top 211px left 260px);
+			@include size(97px, 88px);
+		}
 	}
 
 	&.-two {
 		@include absolute(top 313px left 530px);
 		@include size(131px, 92px);
+
+		@media (max-width: 1023.9px) {
+			@include absolute(top 233px left 397px);
+			@include size(99px, 70px);
+		}
 	}
 
 	&.-three {
 		@include absolute(top 452px left 335px);
 		@include size(135px, 92px);
+
+		@media (max-width: 1023.9px) {
+			@include absolute(top 337px left 253px);
+			@include size(100px, 72px);
+		}
 	}
 
 	&.-four {
 		@include absolute(top 425px left 229px);
 		@include size(70px, 64px);
+
+		@media (max-width: 1023.9px) {
+			@include absolute(top 318px left 170px);
+			@include size(55px, 48px);
+		}
 	}
 
 	&.-five {
 		@include absolute(top 516px left 143px);
 		@include size(116px, 67px);
+
+		@media (max-width: 1023.9px) {
+			@include absolute(top 380px left 93px);
+			@include size(104px, 57px);
+		}
 	}
 
 	&.-six {
 		@include absolute(top 300px left 704px);
 		@include size(53px, 43px);
+
+		@media (max-width: 1023.9px) {
+			@include absolute(top 226px left 526px);
+			@include size(42px, 32px);
+		}
 	}
 
 	&.-seven {
 		@include absolute(top 506px left 692px);
 		@include size(33px, 54px);
+
+		@media (max-width: 1023.9px) {
+			@include absolute(top 380px left 520px);
+			@include size(24px, 43px);
+		}
 	}
 }
 
@@ -146,11 +209,26 @@ html {
 	position: relative;
 	z-index: 10;
 
+	@media (max-width: 767.9px) {
+		@include size(100%);
+		flex-direction: column;
+	}
+
 	&::before {
 		@include absolute(top 50px left 50px);
 		@include size(839px, 576px);
 		background-color: white;
 		content: '';
+
+		@media (max-width: 1023.9px) {
+			@include absolute(top 40px left 30px);
+			@include size(698px, 466px);
+		}
+
+		@media (max-width: 767.9px) {
+			@include absolute(top 0 left 0);
+			@include size(100%, 90%);
+		}
 	}
 
 	&::after {
@@ -160,6 +238,14 @@ html {
 		background-repeat: no-repeat;
 		background-size: contain;
 		pointer-events: none;
+
+		@media (max-width: 1023.9px) {
+			@include size(768px, 570px);
+		}
+
+		@media (max-width: 767.9px) {
+			display: none;
+		}
 
 		.-anita & {
 			background-image: url('https://ernieayala.github.io/insidemywindow/images/F.tent.png');
@@ -177,7 +263,8 @@ html {
 			background-image: url('https://ernieayala.github.io/insidemywindow/images/F.sebas.png');
 		}
 
-		.-ernie & {
+		.-ernie &,
+		.-intro & {
 			background-image: url('https://ernieayala.github.io/insidemywindow/images/F.tajinito.png');
 		}
 
@@ -199,6 +286,18 @@ html {
 		margin-left: 50px;
 		margin-top: 50px;
 		position: relative;
+
+		@media (max-width: 1023.9px) {
+			@include size(40%, 456px);
+			margin-left: 40px;
+		}
+
+		@media (max-width: 767.9px) {
+			@include size(100%, 40%);
+			margin: 0;
+			border-right: none;
+			border-bottom: 4px solid black;
+		}
 
 		.-anita & {
 			background-image: url('https://ernieayala.github.io/insidemywindow/images/anita.jpeg');
@@ -237,8 +336,33 @@ html {
 		margin-top: 50px;
 		position: relative;
 
+		@media (max-width: 1023.9px) {
+			@include size(50%, 506px);
+			align-items: flex-start;
+			margin-top: 0;
+			padding-top: 80px;
+		}
+
+		@media (max-width: 767.9px) {
+			@include size(100%, 60%);
+			margin: 0;
+			padding: 0;
+		}
+
+		p {
+			font-size: 16px;
+
+			@media (max-width: 767.9px) {
+				font-size: 14px;
+			}
+		}
+
 		h2 {
 			margin-bottom: 0;
+
+			@media (max-width: 767.9px) {
+				margin: 0;
+			}
 		}
 
 		h5 {
@@ -250,6 +374,11 @@ html {
 			color: #666;
 			font-family: Georgia;
 			padding: 50px;
+
+			@media (max-width: 1023.9px) {
+				padding: 20px;
+				padding-right: 40px;
+			}
 
 			.-anita & {
 				&.-anita {
@@ -292,6 +421,99 @@ html {
 					display: block;
 				}
 			}
+		}
+	}
+
+	.-intro & {
+		.ss-modal-intro-text {
+			@include size(100%);
+			align-items: center;
+			display: flex;
+			font-family: Georgia;
+			justify-content: center;
+			padding: 25%;
+			position: relative;
+
+			@media (max-width: 1023.9px) {
+				align-items: flex-start;
+				padding: 20%;
+			}
+
+			&.-intro {
+				display: flex;
+
+				&.-mobile {
+					display: none;
+				}
+
+				@media (max-width: 767.9px) {
+					display: none;
+
+					&.-mobile {
+						display: flex;
+					}
+				}
+			}
+		}
+	}
+}
+
+.ss-modal-close-button {
+	@include absolute(top 90px right 90px);
+	@include size(30px);
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	font-family: Georgia;
+	font-size: 22px;
+	justify-content: center;
+
+	&:hover {
+		background-color: rgba(0,0,0,0.05);
+	}
+
+	@media (max-width: 1023.9px) {
+		@include absolute(top 70px right 70px);
+	}
+
+	@media (max-width: 767.9px) {
+		@include absolute(top 0 right 0);
+		@include size(80px);
+		background-color: rgba(0,0,0,0.02);
+	}
+}
+
+.ss-menu {
+	@include absolute(top 20px left 0);
+	@include size(90%, auto);
+	background-color: rgba(255,255,255,0.5);
+	display: none;
+	flex-direction: column;
+	font-family: Georgia;
+	padding: 20px;
+
+	@media (max-width: 767.9px) {
+		display: flex;
+
+		.ss-signature {
+			@include relative(top auto left auto);
+			display: block;
+			margin-top: 20px;
+		}
+	}
+
+	button {
+		background-color: rgba(0,0,0,0.1);
+		border: none;
+		cursor: pointer;
+		font-family: Georgia;
+		font-size: 16px;
+		padding: 10px;
+		margin-bottom: 5px;
+		text-align: left;
+
+		&:hover {
+			background-color: rgba(0,0,0,0.2);
 		}
 	}
 }
